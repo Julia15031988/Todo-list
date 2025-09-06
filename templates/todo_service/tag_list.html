@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}TAGS LIST{% endblock %}
+{% block content %}
+<h1>Теги</h1>
+<a href="{% url 'todo:tag-create' %}">➕ Create TAG</a>
+<ul>
+    {% for tag in tag_list %}
+        <li>
+            {{ tag.name }}
+            <a href="{% url 'todo:tag-update' tag.pk %}">✏️</a>
+            <a href="{% url 'todo:tag-delete' tag.pk %}">🗑️</a>
+        </li>
+    {% empty %}
+        <li>NO TAGS</li>
+    {% endfor %}
+</ul>
+{% endblock %}

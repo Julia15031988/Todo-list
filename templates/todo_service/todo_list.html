@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<{% extends "base.html" %}
+{% block title %}Список задач{% endblock %}
+{% block content %}
+<h1>MY TASKS</h1>
+<a href="{% url 'todo:task-create' %}">➕ CREATE TASK</a>
+<ul>
+    {% for task in task_list %}
+        <li>
+            {{ task.name }} — {% if task.is_done %}✅{% else %}❌{% endif %}
+            <a href="{% url 'todo:task-update' task.pk %}">✏️</a>
+            <a href="{% url 'todo:task-delete' task.pk %}">🗑️</a>
+            <a href="{% url 'todo:task-switch-status' task.pk %}">🔄</a>
+        </li>
+    {% empty %}
+        <li>NO TASKS</li>
+    {% endfor %}
+</ul>
+{% endblock %}

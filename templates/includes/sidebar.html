@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<nav class="sidebar">
+    <ul>
+        <li><a href="{% url 'todo:todo-list' %}">📋 TASKS</a></li>
+        <li><a href="{% url 'todo:tag-list' %}">🏷️ TAGS</a></li>
+        <li><a href="{% url 'logout' %}">🚪 LOG OUT</a></li>
+    </ul>
+</nav>

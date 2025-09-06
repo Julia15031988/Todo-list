@@ -12,6 +12,7 @@ class TodoListView(LoginRequiredMixin, generic.ListView):
     model = Task
     template_name = "todo/todo_list.html"  # виправлено
     context_object_name = "task_list"
+    paginate_by = 10
 
 
 class TaskCreateView(LoginRequiredMixin, generic.CreateView):
