@@ -11,7 +11,7 @@ from .views import (
     TagDeleteView,
 )
 
-app_name = "todo_list"
+app_name = "todo"
 
 urlpatterns = [
     path("", TodoListView.as_view(), name="todo-list"),
