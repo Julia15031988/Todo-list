@@ -92,3 +92,32 @@ a.button:hover {
     float: right;
     margin-bottom: 20px;
 }
+
+.task-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.task-card h3 {
+    margin-top: 0;
+}
+
+.tag {
+    background-color: #e0e0e0;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+.actions {
+    margin-top: 10px;
+}
+
+.actions .button {
+    margin-right: 10px;
+}
