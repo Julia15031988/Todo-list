@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}FORM OF TASK{% endblock %}
 {% block content %}
-<h2>{% if form.instance.pk %} EDIT {% else %} CREATE {% endif %} задачу</h2>
+<h2>{% if form.instance.pk %} EDIT {% else %} CREATE {% endif %}</h2>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
